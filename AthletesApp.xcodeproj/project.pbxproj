@@ -218,6 +218,7 @@
 				5B8653A823D791DA00798D94 /* Sources */,
 				5B8653A923D791DA00798D94 /* Frameworks */,
 				5B8653AA23D791DA00798D94 /* Resources */,
+				A5B70300BCB31CCE4DF00ADA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -255,6 +256,7 @@
 				5B8653C923D791E400798D94 /* Sources */,
 				5B8653CA23D791E400798D94 /* Frameworks */,
 				5B8653CB23D791E400798D94 /* Resources */,
+				77EF536B1669C6FDE2BF04C1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -340,6 +342,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		77EF536B1669C6FDE2BF04C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AthletesApp-AthletesAppUITests/Pods-AthletesApp-AthletesAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AthletesApp-AthletesAppUITests/Pods-AthletesApp-AthletesAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AthletesApp-AthletesAppUITests/Pods-AthletesApp-AthletesAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5B70300BCB31CCE4DF00ADA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AthletesApp/Pods-AthletesApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AthletesApp/Pods-AthletesApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AthletesApp/Pods-AthletesApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D570100E0CD91C75B75CCB2E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
