@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,9 +23,6 @@
 		5B01B6B623D8E30600458EC4 /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01B6B523D8E30600458EC4 /* Weight.swift */; };
 		5B01B6B723D8E30600458EC4 /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01B6B523D8E30600458EC4 /* Weight.swift */; };
 		5B01B6B823D8E30600458EC4 /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01B6B523D8E30600458EC4 /* Weight.swift */; };
-		5B01B6BA23D8E4ED00458EC4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B01B6B923D8E4ED00458EC4 /* GoogleService-Info.plist */; };
-		5B01B6BB23D8E4ED00458EC4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B01B6B923D8E4ED00458EC4 /* GoogleService-Info.plist */; };
-		5B01B6BC23D8E4ED00458EC4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B01B6B923D8E4ED00458EC4 /* GoogleService-Info.plist */; };
 		5B8653B023D791DA00798D94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8653AF23D791DA00798D94 /* AppDelegate.swift */; };
 		5B8653B223D791DA00798D94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8653B123D791DA00798D94 /* SceneDelegate.swift */; };
 		5B8653B423D791DA00798D94 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8653B323D791DA00798D94 /* MainViewController.swift */; };
@@ -65,7 +62,6 @@
 		5B01B6AD23D8E11800458EC4 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		5B01B6B123D8E12300458EC4 /* Athlete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Athlete.swift; sourceTree = "<group>"; };
 		5B01B6B523D8E30600458EC4 /* Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
-		5B01B6B923D8E4ED00458EC4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5B0EBD0DB41F4FF9D9B83E6D /* Pods_AthletesApp_AthletesAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AthletesApp_AthletesAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B8653AC23D791DA00798D94 /* AthletesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AthletesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B8653AF23D791DA00798D94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -168,7 +164,6 @@
 				5B8653B823D791E400798D94 /* Assets.xcassets */,
 				5B8653BA23D791E400798D94 /* LaunchScreen.storyboard */,
 				5B8653BD23D791E400798D94 /* Info.plist */,
-				5B01B6B923D8E4ED00458EC4 /* GoogleService-Info.plist */,
 				5B01B6A423D8D31B00458EC4 /* AthletesViewController.swift */,
 				5B01B6A823D8D32A00458EC4 /* TeamsViewController.swift */,
 			);
@@ -203,7 +198,6 @@
 				5600186FEA96BAF1CCB66825 /* Pods-AthletesAppTests.debug.xcconfig */,
 				4755FBB353F457726706C840 /* Pods-AthletesAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -317,7 +311,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B8653BC23D791E400798D94 /* LaunchScreen.storyboard in Resources */,
-				5B01B6BA23D8E4ED00458EC4 /* GoogleService-Info.plist in Resources */,
 				5B8653B923D791E400798D94 /* Assets.xcassets in Resources */,
 				5B8653B723D791DA00798D94 /* Main.storyboard in Resources */,
 			);
@@ -327,7 +320,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B01B6BB23D8E4ED00458EC4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,7 +327,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B01B6BC23D8E4ED00458EC4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

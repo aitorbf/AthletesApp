@@ -6,15 +6,15 @@
 //  Copyright © 2020 Aitor. All rights reserved.
 //
 
-struct Team: Codable {
+class Team {
     
     let id: String
     let name: String?
     let sport: String?
     
-    enum CodingKeys: String, CodingKey {
-        case id = "id"
-        case name = "name"
-        case sport = "sport"
+    init(aId: String, aName: String?, aSport: String?) {
+        id = aId
+        name = aName
+        sport = aSport
     }
 }

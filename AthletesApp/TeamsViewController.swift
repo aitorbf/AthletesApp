@@ -7,24 +7,65 @@
 //
 
 import UIKit
+import Firebase
 
 class TeamsViewController: UIViewController {
 
+    // MARK: - IBOutlets
+    
+    @IBOutlet weak var teamsTableView: UITableView!
+    
+    // MARK: - Private Variables
+    
+    private var ref: DatabaseReference! = Database.database().reference()
+    private var teams: [Team] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupTableView()
+        getTeams()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Private Functions
+    
+    private func setupTableView() {
+        teamsTableView.delegate = self
+        teamsTableView.dataSource = self
     }
-    */
+    
+    private func getTeams() {
+        ref.child("teams").observeSingleEvent(of: .value, with: { (snapshot) in
+            if snapshot.exists() {
+                if let snapshotTeams = snapshot.value as? [String : [String:Any]] {
+                    for (key, value) in snapshotTeams {
+                        let team = Team(aId: key, aName: value["name"] as? String, aSport: value["sport"] as? String)
+                        self.teams.append(team)
+                    }
+                }
+            } else {
+                self.teams = []
+            }
+            self.teamsTableView.reloadData()
+          }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
 
+}
+
+extension TeamsViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        teams.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let teamCell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "teamCell")
+        teamCell.textLabel?.text = teams[indexPath.row].name
+        teamCell.detailTextLabel?.text = teams[indexPath.row].sport
+        
+        return teamCell
+    }
+    
 }
