@@ -14,22 +14,29 @@ class AthletesViewController: UIViewController {
     // MARK: - IBOutlets
     
     @IBOutlet weak var athletesCollectionView: UICollectionView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     // MARK: - Private Variables
     
     private var ref: DatabaseReference! = Database.database().reference()
-    private var athletes: [Athlete] = []
+    private var athletes = [Athlete]()
+    private var filteredAthletes = [Athlete]()
     
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupSearchBar()
         setupCollectionView()
         getAthletes()
     }
 
     // MARK: - Private Functions
+    
+    private func setupSearchBar() {
+        searchBar.delegate = self
+    }
     
     private func setupCollectionView() {
         athletesCollectionView.delegate = self
@@ -65,6 +72,7 @@ class AthletesViewController: UIViewController {
             } else {
                 self.athletes = []
             }
+            self.filteredAthletes = self.athletes
             self.athletesCollectionView.reloadData()
           }) { (error) in
             print(error.localizedDescription)
@@ -75,7 +83,7 @@ class AthletesViewController: UIViewController {
 extension AthletesViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        athletes.count
+        return filteredAthletes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -85,11 +93,23 @@ extension AthletesViewController: UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "athleteCell", for: indexPath) as! AthleteCollectionViewCell
-        cell.drawData(name: athletes[indexPath.row].name ?? "")
+        cell.drawData(athlete: filteredAthletes[indexPath.row])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Cell \(indexPath.row) selected")
+    }
+}
+
+extension AthletesViewController: UISearchBarDelegate {
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText != "" {
+            filteredAthletes = athletes.filter { $0.name?.range(of: searchText, options: .caseInsensitive) != nil }
+        } else {
+            filteredAthletes = athletes
+        }
+        self.athletesCollectionView.reloadData()
     }
 }

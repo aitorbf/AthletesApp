@@ -12,8 +12,8 @@ class AthleteCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     
-    func drawData(name: String) {
-        nameLabel.text = name
+    func drawData(athlete: Athlete) {
+        nameLabel.text = athlete.name
     }
     
 }
