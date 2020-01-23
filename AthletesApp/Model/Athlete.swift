@@ -6,19 +6,19 @@
 //  Copyright © 2020 Aitor. All rights reserved.
 //
 
-struct Athlete: Codable {
-    
+class Athlete {
+
     let id: String
     let name: String?
     let sport: String?
     let surname: String?
     let weights: [Weight]?
     
-    enum CodingKeys: String, CodingKey {
-        case id = "id"
-        case name = "name"
-        case sport = "sport"
-        case surname = "surname"
-        case weights = "weights"
+    init(aId: String, aName: String?, aSport: String?, aSurname: String?, aWeights: [Weight]?) {
+        id = aId
+        name = aName
+        sport = aSport
+        surname = aSurname
+        weights = aWeights
     }
 }

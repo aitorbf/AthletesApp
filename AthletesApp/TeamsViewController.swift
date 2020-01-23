@@ -20,6 +20,8 @@ class TeamsViewController: UIViewController {
     private var ref: DatabaseReference! = Database.database().reference()
     private var teams: [Team] = []
     
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,7 +41,11 @@ class TeamsViewController: UIViewController {
             if snapshot.exists() {
                 if let snapshotTeams = snapshot.value as? [String : [String:Any]] {
                     for (key, value) in snapshotTeams {
-                        let team = Team(aId: key, aName: value["name"] as? String, aSport: value["sport"] as? String)
+                        let team = Team(
+                            aId: key,
+                            aName: value["name"] as? String,
+                            aSport: value["sport"] as? String
+                        )
                         self.teams.append(team)
                     }
                 }

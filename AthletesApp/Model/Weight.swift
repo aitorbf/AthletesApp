@@ -6,14 +6,26 @@
 //  Copyright © 2020 Aitor. All rights reserved.
 //
 
-struct Weight: Codable {
+import Foundation
+
+class Weight {
     
-    let date: String?
+    let date: Date
     let value: Float?
     
-    enum CodingKeys: String, CodingKey {
-        case date = "date"
-        case value = "value"
+    init(aDate: Date, aValue: Float?) {
+        date = aDate
+        value = aValue
+    }
+    
+    func getDateAsString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.string(from: date)
+    }
+    
+    func getRoundedValue() -> Float? {
+        return Float(String(format: "%.2f", value ?? 0))
     }
 }
 

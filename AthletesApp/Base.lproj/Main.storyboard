@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -110,13 +111,78 @@
                     <view key="view" contentMode="scaleToFill" id="P7T-sz-Ehv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AFQ-1S-H7N">
+                                <rect key="frame" x="8" y="52" width="398" height="802"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Dkc-a3-wp6">
+                                    <size key="itemSize" width="104" height="84"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="athleteCell" id="tZO-sA-4oE" customClass="AthleteCollectionViewCell" customModule="AthletesApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="aFC-bw-hDX">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="athlete_placeholder.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mkn-8e-0sj">
+                                                    <rect key="frame" x="20" y="2" width="60" height="72"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="72" id="A7J-hf-Xub"/>
+                                                        <constraint firstAttribute="width" constant="60" id="trF-Iy-5K8"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPK-Jv-Jqn">
+                                                    <rect key="frame" x="2" y="78" width="96" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="L2P-9C-8hu"/>
+                                                        <constraint firstAttribute="width" constant="96" id="n69-0v-Skr"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dPK-Jv-Jqn" firstAttribute="leading" secondItem="aFC-bw-hDX" secondAttribute="leading" constant="2" id="1LM-BS-zLg"/>
+                                                <constraint firstAttribute="trailing" secondItem="dPK-Jv-Jqn" secondAttribute="trailing" constant="2" id="atp-cy-wJM"/>
+                                                <constraint firstItem="mkn-8e-0sj" firstAttribute="top" secondItem="aFC-bw-hDX" secondAttribute="top" constant="2" id="bOY-ro-iw6"/>
+                                                <constraint firstItem="dPK-Jv-Jqn" firstAttribute="top" secondItem="mkn-8e-0sj" secondAttribute="bottom" constant="4" id="jBm-Pa-SAb"/>
+                                                <constraint firstAttribute="bottom" secondItem="dPK-Jv-Jqn" secondAttribute="bottom" constant="2" id="rG7-VY-7dh"/>
+                                                <constraint firstItem="mkn-8e-0sj" firstAttribute="centerX" secondItem="aFC-bw-hDX" secondAttribute="centerX" id="y2N-eP-XbP"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="100" height="100"/>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="dPK-Jv-Jqn" id="UvN-fP-vNG"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3Tn-I1-3sX" firstAttribute="trailing" secondItem="AFQ-1S-H7N" secondAttribute="trailing" constant="8" id="KZ5-jv-0zy"/>
+                            <constraint firstItem="3Tn-I1-3sX" firstAttribute="bottom" secondItem="AFQ-1S-H7N" secondAttribute="bottom" constant="8" id="MIc-U5-nkq"/>
+                            <constraint firstItem="AFQ-1S-H7N" firstAttribute="top" secondItem="3Tn-I1-3sX" secondAttribute="top" constant="8" id="mTD-kE-ykY"/>
+                            <constraint firstItem="AFQ-1S-H7N" firstAttribute="leading" secondItem="3Tn-I1-3sX" secondAttribute="leading" constant="8" id="teT-ge-Jql"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3Tn-I1-3sX"/>
                     </view>
+                    <connections>
+                        <outlet property="athletesCollectionView" destination="AFQ-1S-H7N" id="6IE-Us-vgo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qAH-Hj-i7n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2147.826086956522" y="-222.32142857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="athlete_placeholder.jpg" width="864" height="1080"/>
+    </resources>
 </document>
