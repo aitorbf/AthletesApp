@@ -12,6 +12,7 @@ class AthleteDetailViewController: UIViewController {
 
     // MARK: - IBOutlets
     
+    @IBOutlet weak var athleteImageView: UIImageView!
     @IBOutlet weak var athleteDetailsTableView: UITableView!
     
     // MARK: - Public Variables
@@ -21,10 +22,15 @@ class AthleteDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupTableView()
+        setupView()
     }
     
     // MARK: - Private Functions
+    
+    private func setupView() {
+        athleteImageView.layer.cornerRadius = athleteImageView.bounds.size.width / 2.0
+        setupTableView()
+    }
     
     private func setupTableView() {
         athleteDetailsTableView.delegate = self
@@ -42,7 +48,7 @@ extension AthleteDetailViewController: UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
-            return "Personal data"
+            return "Personal Data"
         case 1:
             return "Weights"
         default:
@@ -64,7 +70,7 @@ extension AthleteDetailViewController: UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var athleteDetailCell: UITableViewCell?
         if indexPath.section == 0 {
-            athleteDetailCell = UITableViewCell(style: UITableViewCell.CellStyle.value2, reuseIdentifier: "athleteDetailCell")
+            athleteDetailCell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "athleteDetailCell")
             switch indexPath.row {
             case 0:
                 athleteDetailCell?.textLabel?.text = "Name"
