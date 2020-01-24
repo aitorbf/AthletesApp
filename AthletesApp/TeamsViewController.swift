@@ -70,7 +70,7 @@ extension TeamsViewController: UITableViewDataSource, UITableViewDelegate {
         let teamCell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "teamCell")
         teamCell.textLabel?.text = teams[indexPath.row].name
         teamCell.detailTextLabel?.text = teams[indexPath.row].sport
-        
+        teamCell.selectionStyle = .none
         return teamCell
     }
     

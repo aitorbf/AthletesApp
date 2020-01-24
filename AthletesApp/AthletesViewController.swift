@@ -31,6 +31,14 @@ class AthletesViewController: UIViewController {
         setupCollectionView()
         getAthletes()
     }
+    
+    // MARK: - Segue Functions
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let athleteDetailVC = segue.destination as? AthleteDetailViewController, let cell = sender as? AthleteCollectionViewCell, let selectedRow = athletesCollectionView.indexPath(for: cell)?.row {
+            athleteDetailVC.athlete = filteredAthletes[selectedRow]
+        }
+    }
 
     // MARK: - Private Functions
     
@@ -95,10 +103,6 @@ extension AthletesViewController: UICollectionViewDataSource, UICollectionViewDe
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "athleteCell", for: indexPath) as! AthleteCollectionViewCell
         cell.drawData(athlete: filteredAthletes[indexPath.row])
         return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Cell \(indexPath.row) selected")
     }
 }
 
