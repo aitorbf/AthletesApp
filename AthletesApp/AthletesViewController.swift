@@ -43,6 +43,11 @@ class AthletesViewController: UIViewController {
     // MARK: - Private Functions
     
     private func setupSearchBar() {
+        searchBar.changeSearchBarColor(color: UIColor.clear)
+        let txtFieldInsideSearchBar = searchBar.value(forKey: "searchField") as! UITextField
+        txtFieldInsideSearchBar.textColor = UIColor.black
+        txtFieldInsideSearchBar.backgroundColor = UIColor.init(red: 61, green: 71, blue: 98, alpha: 1)
+        searchBar.tintColor = UIColor.black
         searchBar.delegate = self
     }
     
@@ -57,7 +62,7 @@ class AthletesViewController: UIViewController {
                 if let snapshotTeams = snapshot.value as? [String : [String:Any]] {
                     for (key, value) in snapshotTeams {
                         var weights: [Weight] = []
-                        if let athleteWeights = value["weights"] as? Dictionary<String, Any> {
+                        if let athleteWeights = value["weights"] as? [String : Any] {
                             for (key, value) in athleteWeights {
                                 let dateFormatter = DateFormatter()
                                 dateFormatter.dateFormat = "yyyy-MM-dd"
@@ -115,5 +120,20 @@ extension AthletesViewController: UISearchBarDelegate {
             filteredAthletes = athletes
         }
         self.athletesCollectionView.reloadData()
+    }
+}
+
+extension UISearchBar {
+    func changeSearchBarColor(color : UIColor) {
+        self.searchBarStyle = UISearchBar.Style.minimal
+        for subView in self.subviews {
+            for subSubView in subView.subviews {
+                if subSubView.conforms(to: UITextInputTraits.self) {
+                    let textField = subSubView as! UITextField
+                    textField.backgroundColor = color
+                    break
+                }
+            }
+        }
     }
 }

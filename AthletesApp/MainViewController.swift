@@ -38,8 +38,8 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        segmentedControl.selectedSegmentIndex = SegmentIndex.athletesIndex.rawValue
-        displayCurrentTab(SegmentIndex.athletesIndex.rawValue)
+        
+        setupSegmentedControl()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -50,6 +50,13 @@ class MainViewController: UIViewController {
     }
 
     // MARK: - Private Functions
+    
+    private func setupSegmentedControl() {
+        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .selected)
+        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
+        segmentedControl.selectedSegmentIndex = SegmentIndex.athletesIndex.rawValue
+        displayCurrentTab(SegmentIndex.athletesIndex.rawValue)
+    }
     
     private func displayCurrentTab(_ tabIndex: Int){
         if let vc = viewControllerForSelectedSegmentIndex(tabIndex) {
