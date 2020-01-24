@@ -9,11 +9,7 @@
 /* Begin PBXBuildFile section */
 		5A4BB525B9305F535615B22A /* Pods_AthletesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C3DEB52F1AAA24A2CB6734 /* Pods_AthletesApp.framework */; };
 		5B01B6A523D8D31B00458EC4 /* AthletesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01B6A423D8D31B00458EC4 /* AthletesViewController.swift */; };
-		5B01B6A623D8D31B00458EC4 /* AthletesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01B6A423D8D31B00458EC4 /* AthletesViewController.swift */; };
-		5B01B6A723D8D31B00458EC4 /* AthletesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01B6A423D8D31B00458EC4 /* AthletesViewController.swift */; };
 		5B01B6A923D8D32A00458EC4 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01B6A823D8D32A00458EC4 /* TeamsViewController.swift */; };
-		5B01B6AA23D8D32A00458EC4 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01B6A823D8D32A00458EC4 /* TeamsViewController.swift */; };
-		5B01B6AB23D8D32A00458EC4 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01B6A823D8D32A00458EC4 /* TeamsViewController.swift */; };
 		5B01B6AE23D8E11800458EC4 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01B6AD23D8E11800458EC4 /* Team.swift */; };
 		5B01B6AF23D8E11800458EC4 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01B6AD23D8E11800458EC4 /* Team.swift */; };
 		5B01B6B023D8E11800458EC4 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01B6AD23D8E11800458EC4 /* Team.swift */; };
@@ -28,12 +24,14 @@
 		5B01B6CC23D9161B00458EC4 /* athlete_placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5B01B6CA23D9161B00458EC4 /* athlete_placeholder.jpg */; };
 		5B01B6CD23D9161B00458EC4 /* athlete_placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5B01B6CA23D9161B00458EC4 /* athlete_placeholder.jpg */; };
 		5B01B6D723DA3F8C00458EC4 /* AthleteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01B6D623DA3F8C00458EC4 /* AthleteCollectionViewCell.swift */; };
-		5B01B6D823DA3F8C00458EC4 /* AthleteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01B6D623DA3F8C00458EC4 /* AthleteCollectionViewCell.swift */; };
-		5B01B6D923DA3F8C00458EC4 /* AthleteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01B6D623DA3F8C00458EC4 /* AthleteCollectionViewCell.swift */; };
 		5B01B6DB23DA660E00458EC4 /* AthleteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01B6DA23DA660E00458EC4 /* AthleteDetailViewController.swift */; };
-		5B01B6DC23DA660E00458EC4 /* AthleteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01B6DA23DA660E00458EC4 /* AthleteDetailViewController.swift */; };
-		5B01B6DD23DA660E00458EC4 /* AthleteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01B6DA23DA660E00458EC4 /* AthleteDetailViewController.swift */; };
 		5B01B6E123DB4DA900458EC4 /* athlete_placeholder_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B01B6DF23DB4DA900458EC4 /* athlete_placeholder_2.png */; };
+		5B01B6E623DBA0AF00458EC4 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01B6E523DBA0AF00458EC4 /* UIViewControllerExtension.swift */; };
+		5B01B6E723DBA0AF00458EC4 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01B6E523DBA0AF00458EC4 /* UIViewControllerExtension.swift */; };
+		5B01B6E823DBA0AF00458EC4 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01B6E523DBA0AF00458EC4 /* UIViewControllerExtension.swift */; };
+		5B01B6EA23DBA12600458EC4 /* UISearchBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01B6E923DBA12600458EC4 /* UISearchBarExtension.swift */; };
+		5B01B6EB23DBA12600458EC4 /* UISearchBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01B6E923DBA12600458EC4 /* UISearchBarExtension.swift */; };
+		5B01B6EC23DBA12700458EC4 /* UISearchBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01B6E923DBA12600458EC4 /* UISearchBarExtension.swift */; };
 		5B8653B023D791DA00798D94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8653AF23D791DA00798D94 /* AppDelegate.swift */; };
 		5B8653B223D791DA00798D94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8653B123D791DA00798D94 /* SceneDelegate.swift */; };
 		5B8653B423D791DA00798D94 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8653B323D791DA00798D94 /* MainViewController.swift */; };
@@ -78,6 +76,8 @@
 		5B01B6D623DA3F8C00458EC4 /* AthleteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteCollectionViewCell.swift; sourceTree = "<group>"; };
 		5B01B6DA23DA660E00458EC4 /* AthleteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteDetailViewController.swift; sourceTree = "<group>"; };
 		5B01B6DF23DB4DA900458EC4 /* athlete_placeholder_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = athlete_placeholder_2.png; sourceTree = "<group>"; };
+		5B01B6E523DBA0AF00458EC4 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		5B01B6E923DBA12600458EC4 /* UISearchBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBarExtension.swift; sourceTree = "<group>"; };
 		5B0EBD0DB41F4FF9D9B83E6D /* Pods_AthletesApp_AthletesAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AthletesApp_AthletesAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B8653AC23D791DA00798D94 /* AthletesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AthletesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B8653AF23D791DA00798D94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +156,36 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		5B01B6E223DB8C6400458EC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B8653B523D791DA00798D94 /* Main.storyboard */,
+				5B8653BA23D791E400798D94 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5B01B6E323DB8C7E00458EC4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B8653B323D791DA00798D94 /* MainViewController.swift */,
+				5B01B6A823D8D32A00458EC4 /* TeamsViewController.swift */,
+				5B01B6A423D8D31B00458EC4 /* AthletesViewController.swift */,
+				5B01B6D623DA3F8C00458EC4 /* AthleteCollectionViewCell.swift */,
+				5B01B6DA23DA660E00458EC4 /* AthleteDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5B01B6E423DBA07D00458EC4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5B01B6E523DBA0AF00458EC4 /* UIViewControllerExtension.swift */,
+				5B01B6E923DBA12600458EC4 /* UISearchBarExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		5B8653A323D791DA00798D94 = {
 			isa = PBXGroup;
 			children = (
@@ -181,20 +211,16 @@
 		5B8653AE23D791DA00798D94 /* AthletesApp */ = {
 			isa = PBXGroup;
 			children = (
-				5B01B6C923D9160400458EC4 /* Resources */,
+				5B01B6E423DBA07D00458EC4 /* Extension */,
 				5B01B6AC23D8E10400458EC4 /* Model */,
+				5B01B6E223DB8C6400458EC4 /* View */,
+				5B01B6E323DB8C7E00458EC4 /* Controller */,
+				5B01B6C923D9160400458EC4 /* Resources */,
 				5B8653AF23D791DA00798D94 /* AppDelegate.swift */,
 				5B8653B123D791DA00798D94 /* SceneDelegate.swift */,
-				5B8653B323D791DA00798D94 /* MainViewController.swift */,
-				5B8653B523D791DA00798D94 /* Main.storyboard */,
 				5B8653B823D791E400798D94 /* Assets.xcassets */,
-				5B8653BA23D791E400798D94 /* LaunchScreen.storyboard */,
 				5B8653BD23D791E400798D94 /* Info.plist */,
 				5B01B6BF23D8FC3900458EC4 /* GoogleService-Info.plist */,
-				5B01B6A823D8D32A00458EC4 /* TeamsViewController.swift */,
-				5B01B6A423D8D31B00458EC4 /* AthletesViewController.swift */,
-				5B01B6D623DA3F8C00458EC4 /* AthleteCollectionViewCell.swift */,
-				5B01B6DA23DA660E00458EC4 /* AthleteDetailViewController.swift */,
 			);
 			path = AthletesApp;
 			sourceTree = "<group>";
@@ -481,8 +507,10 @@
 				5B8653B423D791DA00798D94 /* MainViewController.swift in Sources */,
 				5B8653B023D791DA00798D94 /* AppDelegate.swift in Sources */,
 				5B01B6A923D8D32A00458EC4 /* TeamsViewController.swift in Sources */,
+				5B01B6EA23DBA12600458EC4 /* UISearchBarExtension.swift in Sources */,
 				5B8653B223D791DA00798D94 /* SceneDelegate.swift in Sources */,
 				5B01B6B223D8E12400458EC4 /* Athlete.swift in Sources */,
+				5B01B6E623DBA0AF00458EC4 /* UIViewControllerExtension.swift in Sources */,
 				5B01B6B623D8E30600458EC4 /* Weight.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,13 +520,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B01B6B323D8E12400458EC4 /* Athlete.swift in Sources */,
+				5B01B6EB23DBA12600458EC4 /* UISearchBarExtension.swift in Sources */,
 				5B01B6AF23D8E11800458EC4 /* Team.swift in Sources */,
-				5B01B6A623D8D31B00458EC4 /* AthletesViewController.swift in Sources */,
-				5B01B6AA23D8D32A00458EC4 /* TeamsViewController.swift in Sources */,
-				5B01B6D823DA3F8C00458EC4 /* AthleteCollectionViewCell.swift in Sources */,
+				5B01B6E723DBA0AF00458EC4 /* UIViewControllerExtension.swift in Sources */,
 				5B8653C723D791E400798D94 /* AthletesAppTests.swift in Sources */,
 				5B01B6B723D8E30600458EC4 /* Weight.swift in Sources */,
-				5B01B6DC23DA660E00458EC4 /* AthleteDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,13 +533,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B01B6B423D8E12400458EC4 /* Athlete.swift in Sources */,
+				5B01B6EC23DBA12700458EC4 /* UISearchBarExtension.swift in Sources */,
 				5B01B6B023D8E11800458EC4 /* Team.swift in Sources */,
-				5B01B6A723D8D31B00458EC4 /* AthletesViewController.swift in Sources */,
-				5B01B6AB23D8D32A00458EC4 /* TeamsViewController.swift in Sources */,
-				5B01B6D923DA3F8C00458EC4 /* AthleteCollectionViewCell.swift in Sources */,
+				5B01B6E823DBA0AF00458EC4 /* UIViewControllerExtension.swift in Sources */,
 				5B8653D223D791E400798D94 /* AthletesAppUITests.swift in Sources */,
 				5B01B6B823D8E30600458EC4 /* Weight.swift in Sources */,
-				5B01B6DD23DA660E00458EC4 /* AthleteDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

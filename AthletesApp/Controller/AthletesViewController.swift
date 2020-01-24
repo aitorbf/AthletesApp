@@ -57,6 +57,7 @@ class AthletesViewController: UIViewController {
     }
     
     private func getAthletes() {
+        self.showSpinner(onView: self.view)
         ref.child("users").observeSingleEvent(of: .value, with: { (snapshot) in
             if snapshot.exists() {
                 if let snapshotTeams = snapshot.value as? [String : [String:Any]] {
@@ -86,12 +87,16 @@ class AthletesViewController: UIViewController {
                 self.athletes = []
             }
             self.filteredAthletes = self.athletes
+            self.removeSpinner()
             self.athletesCollectionView.reloadData()
           }) { (error) in
+            self.removeSpinner()
             print(error.localizedDescription)
         }
     }
 }
+
+// MARK: - UICollectionView Data Source and Delegate
 
 extension AthletesViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -111,6 +116,8 @@ extension AthletesViewController: UICollectionViewDataSource, UICollectionViewDe
     }
 }
 
+// MARK: - UISearchBar Delegate
+
 extension AthletesViewController: UISearchBarDelegate {
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -120,20 +127,5 @@ extension AthletesViewController: UISearchBarDelegate {
             filteredAthletes = athletes
         }
         self.athletesCollectionView.reloadData()
-    }
-}
-
-extension UISearchBar {
-    func changeSearchBarColor(color : UIColor) {
-        self.searchBarStyle = UISearchBar.Style.minimal
-        for subView in self.subviews {
-            for subSubView in subView.subviews {
-                if subSubView.conforms(to: UITextInputTraits.self) {
-                    let textField = subSubView as! UITextField
-                    textField.backgroundColor = color
-                    break
-                }
-            }
-        }
     }
 }

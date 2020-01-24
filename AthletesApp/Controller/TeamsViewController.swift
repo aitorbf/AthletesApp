@@ -37,6 +37,7 @@ class TeamsViewController: UIViewController {
     }
     
     private func getTeams() {
+        self.showSpinner(onView: self.view)
         ref.child("teams").observeSingleEvent(of: .value, with: { (snapshot) in
             if snapshot.exists() {
                 if let snapshotTeams = snapshot.value as? [String : [String:Any]] {
@@ -52,13 +53,17 @@ class TeamsViewController: UIViewController {
             } else {
                 self.teams = []
             }
+            self.removeSpinner()
             self.teamsTableView.reloadData()
           }) { (error) in
+            self.removeSpinner()
             print(error.localizedDescription)
         }
     }
 
 }
+
+// MARK: - UITableView Data Source and Delegate
 
 extension TeamsViewController: UITableViewDataSource, UITableViewDelegate {
     

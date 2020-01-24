@@ -19,6 +19,8 @@ class AthleteDetailViewController: UIViewController {
     
     var athlete: Athlete?
     
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,6 +40,8 @@ class AthleteDetailViewController: UIViewController {
     }
 
 }
+
+// MARK: - UITableView Data Source and Delegate
 
 extension AthleteDetailViewController: UITableViewDataSource, UITableViewDelegate {
     
