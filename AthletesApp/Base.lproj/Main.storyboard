@@ -206,28 +206,41 @@
             </objects>
             <point key="canvasLocation" x="2147.826086956522" y="-222.32142857142856"/>
         </scene>
-        <!--Athlete-->
+        <!--Athlete View Controller-->
         <scene sceneID="LQS-lE-YbP">
             <objects>
-                <viewController id="jMj-TH-hAc" customClass="AthleteDetailViewController" customModule="AthletesApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jMj-TH-hAc" userLabel="Athlete View Controller" customClass="AthleteDetailViewController" customModule="AthletesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Idf-dX-XoL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cn-Ak-xd4">
-                                <rect key="frame" x="89" y="195" width="245" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="athlete_placeholder.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="EtW-Qk-3BB">
+                                <rect key="frame" x="169.5" y="20" width="75" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="3so-Zt-Y2Y"/>
+                                    <constraint firstAttribute="width" constant="75" id="gsC-Wt-tZg"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZTB-4C-xUa">
+                                <rect key="frame" x="0.0" y="130" width="414" height="678"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EtW-Qk-3BB" firstAttribute="centerX" secondItem="Idf-dX-XoL" secondAttribute="centerX" id="5Ci-mA-UQi"/>
+                            <constraint firstItem="ZTB-4C-xUa" firstAttribute="leading" secondItem="3GA-s4-YJ6" secondAttribute="leading" id="CwT-fl-Arl"/>
+                            <constraint firstItem="3GA-s4-YJ6" firstAttribute="trailing" secondItem="ZTB-4C-xUa" secondAttribute="trailing" id="Q67-4g-OHA"/>
+                            <constraint firstItem="3GA-s4-YJ6" firstAttribute="bottom" secondItem="ZTB-4C-xUa" secondAttribute="bottom" id="Ueg-mV-ioV"/>
+                            <constraint firstItem="ZTB-4C-xUa" firstAttribute="centerX" secondItem="Idf-dX-XoL" secondAttribute="centerX" id="ZEb-Pm-LPy"/>
+                            <constraint firstItem="EtW-Qk-3BB" firstAttribute="top" secondItem="3GA-s4-YJ6" secondAttribute="top" constant="20" id="nMi-SI-rVA"/>
+                            <constraint firstItem="ZTB-4C-xUa" firstAttribute="top" secondItem="EtW-Qk-3BB" secondAttribute="bottom" constant="20" id="wss-k3-pSL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3GA-s4-YJ6"/>
                     </view>
                     <navigationItem key="navigationItem" title="Athlete" id="Xhe-Mc-j7K"/>
                     <connections>
-                        <outlet property="athleteName" destination="6cn-Ak-xd4" id="4mG-JU-v2Y"/>
+                        <outlet property="athleteDetailsTableView" destination="ZTB-4C-xUa" id="deo-xh-tQw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zgS-AJ-2kO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
